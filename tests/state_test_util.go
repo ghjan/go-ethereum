@@ -23,22 +23,22 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/crypto/sha3"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/ghjan/go-ethereum/common"
+	"github.com/ghjan/go-ethereum/common/hexutil"
+	"github.com/ghjan/go-ethereum/common/math"
+	"github.com/ghjan/go-ethereum/core"
+	"github.com/ghjan/go-ethereum/core/state"
+	"github.com/ghjan/go-ethereum/core/types"
+	"github.com/ghjan/go-ethereum/core/vm"
+	"github.com/ghjan/go-ethereum/crypto"
+	"github.com/ghjan/go-ethereum/crypto/sha3"
+	"github.com/ghjan/go-ethereum/ethdb"
+	"github.com/ghjan/go-ethereum/params"
+	"github.com/ghjan/go-ethereum/rlp"
 )
 
 // StateTest checks transaction processing without block context.
-// See https://github.com/ethereum/EIPs/issues/176 for the test format specification.
+// See https://github.com/ghjan/EIPs/issues/176 for the test format specification.
 type StateTest struct {
 	json stJSON
 }
@@ -219,7 +219,7 @@ func (tx *stTransaction) toMessage(ps stPostState) (core.Message, error) {
 	dataHex := tx.Data[ps.Indexes.Data]
 	valueHex := tx.Value[ps.Indexes.Value]
 	gasLimit := tx.GasLimit[ps.Indexes.Gas]
-	// Value, Data hex encoding is messy: https://github.com/ethereum/tests/issues/203
+	// Value, Data hex encoding is messy: https://github.com/ghjan/tests/issues/203
 	value := new(big.Int)
 	if valueHex != "0x" {
 		v, ok := math.ParseBig256(valueHex)

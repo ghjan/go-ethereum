@@ -26,13 +26,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/les/flowcontrol"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/ghjan/go-ethereum/common"
+	"github.com/ghjan/go-ethereum/core/types"
+	"github.com/ghjan/go-ethereum/eth"
+	"github.com/ghjan/go-ethereum/les/flowcontrol"
+	"github.com/ghjan/go-ethereum/light"
+	"github.com/ghjan/go-ethereum/p2p"
+	"github.com/ghjan/go-ethereum/rlp"
 )
 
 var (
